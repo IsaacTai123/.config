@@ -1,3 +1,15 @@
 filezilla/
 htop/
 iterm2/
+evolution/
+gnome*/
+goa-1.0/
+gtk-2.0/
+ibus/
+nitrogen/
+pulse/
+dconf/
+*.dirs
+*.locale
+ranger/plugins/__pycache__
+!.gitignore
