@@ -13,3 +13,4 @@ dconf/
 *.locale
 ranger/plugins/__pycache__
 !.gitignore
+mc/
