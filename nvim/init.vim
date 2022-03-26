@@ -1,95 +1,73 @@
-let mapleader = "\<Space>"
-
+"--------------
+" Plugins
+"--------------
 call plug#begin('~/.config/nvim/plugged')
 
-" colorscheme
-Plug 'morhetz/gruvbox'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  " Plug 'scrooloose/nerdtree'
+  " Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'mattn/emmet-vim'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-repeat'
+  Plug 'terryma/vim-multiple-cursors'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  Plug 'airblade/vim-rooter' "add the project concept to fzf. let you to search within whole project.
 
-" css3 syntax highlight
-Plug 'hail2u/vim-css3-syntax'
+  " Show indentation
+  Plug 'Yggdroot/indentLine'
 
-" highlight colors
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+  " for general purpose development
+  Plug 'tomtom/tcomment_vim'
+  Plug 'MarcWeber/vim-addon-mw-utils'
+  Plug 'tomtom/tlib_vim'
+  Plug 'garbas/vim-snipmate'
+  Plug 'honza/vim-snippets'
+  Plug 'majutsushi/tagbar'
+  Plug 'mileszs/ack.vim'
+  Plug 'airblade/vim-gitgutter'
 
-" less syntax highlight
-Plug 'groenewege/vim-less'
+  " for ruby/rails development
+  " Plug 'vim-ruby/vim-ruby'
+  " Plug 'tpope/vim-rails'
+  " Plug 'thoughtbot/vim-rspec'
 
-" Elixir syntax highlight
-Plug 'elixir-editors/vim-elixir'
+  " for vue.js development
+  Plug 'leafOfTree/vim-vue-plugin'
 
-" Shakespeare (Yesod templating)
-Plug 'pbrisbin/vim-syntax-shakespeare'
+  " for Pythone
+  " Plug 'ycm-core/YouCompleteMe'
+  " Plug 'tell-k/vim-autopep8'
+  " Plug 'nvie/vim-flake8'
+  " Plug 'jiangmiao/auto-pairs'
+  Plug 'kien/rainbow_parentheses.vim'
 
-" file tree
-Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+  " color theme
+  " Plug 'rakr/vim-one'
+  Plug 'morhetz/gruvbox'
 
-" fuzzy finder
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+  " javascript syntax
+  Plug 'pangloss/vim-javascript'
 
-" commenting text
-Plug 'tpope/vim-commentary'
+  " css3 syntax highlight
+  Plug 'hail2u/vim-css3-syntax'
 
-" git wrapper
-Plug 'tpope/vim-fugitive'
+  " cpp, c++ syntax highlight
+  Plug 'octol/vim-cpp-enhanced-highlight'
 
-" Syntax highlight for .tsx
-Plug 'ianks/vim-tsx', { 'for': 'typescript.tsx' }
+  " highlight colors
+  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
-" Syntax highlight for .ts
-Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
+  " Autocompletion
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Syntax hightlight for .jsx
-Plug 'mxw/vim-jsx'
+  " file tree
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
-" Syntax hightlight for .js
-Plug 'pangloss/vim-javascript'
+  " Markdown preview
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+  " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
-" Show indentation
-Plug 'Yggdroot/indentLine'
-
-" Highlink yank for a second
-Plug 'machakann/vim-highlightedyank'
-
-" Visual local history
-Plug 'sjl/gundo.vim'
-
-" Surround text with something
-Plug 'tpope/vim-surround'
-
-" Allow repeating of custom commands like surround
-Plug 'tpope/vim-repeat'
-
-" Typescript autocomplete
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-pairs', {'do': 'yarn install --frozen-lockfile'}
-Plug 'iamcco/coc-angular', {'do': 'yarn install --frozen-lockfile && yarn build'}
-Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
-
-" Haskell highlighting
-Plug 'neovimhaskell/haskell-vim'
-
-" Markdown preview
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
-
-" Handlebars highlight
-Plug 'mustache/vim-mustache-handlebars'
-
-" Smart replace, abbreviations, convert case
-Plug 'tpope/vim-abolish'
-
-" Multifile replace
-Plug 'wincent/ferret'
-
-" Show list of merge conflicts
-Plug 'wincent/vcs-jump'
-
-" Functions for manipulating highlight groups
-Plug 'wincent/pinnacle'
-
-" Vim elm syntax
-Plug 'andys8/vim-elm-syntax'
 
 call plug#end()
