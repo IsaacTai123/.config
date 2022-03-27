@@ -20,7 +20,9 @@ set shortmess=I       " remove splash wording
 set equalalways       " split windows are always equal size
 set statusline+=%F    " show path in vim
 let &showbreak='↳ '
-
+set conceallevel=0    " so i can see `` in markdown file
+set nobackup          " this is recommand by coc
+set nowritebackup     " this is recommand by coc
 
 "--------------
 " split window
@@ -39,7 +41,7 @@ set scrolloff=5
 "--------------
 set softtabstop=2
 set shiftwidth=2
-set expandtab
+set expandtab        " Converts tabs to space
 " set tabstop=4
 " set softtabstop=0 noexpandtab
 " set shiftwidth=4

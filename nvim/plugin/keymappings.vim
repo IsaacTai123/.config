@@ -21,11 +21,18 @@ nnoremap <Leader>j o<Esc>
 nnoremap <Leader>k O<Esc> 
 nnoremap <leader>w :wa<CR>
 "map 讀取文件
-nnoremap <leader>s :so %<CR>
+" nnoremap <leader>s :so %<CR>
 nnoremap H ^
 nnoremap L $
-nnoremap <leader>d :e .<CR>
-nnoremap <leader>e :Explore<CR>
+" nnoremap <leader>d :e .<CR>
+" nnoremap <leader>e :Explore<CR>
+nnoremap <leader>cb :bd<CR>
+
+"resize window
+nnoremap <M-l> <C-w><<CR>
+nnoremap <M-h> <C-w>><CR>
+nnoremap <M-k> <C-w>+<CR>
+nnoremap <M-j> <C-w>-<CR>
 
 
 "split navigations
@@ -33,9 +40,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-map vv <C-W>v
-map ss <C-W>s
+map <M-v> <C-W>v
+map <M-s> <C-W>s
 map Q <C-W>q
+map <C-o> <C-w>o
 
 "copy and paste
 vnoremap <C-c> "*y :let @+=@*<CR>

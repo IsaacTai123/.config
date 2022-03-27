@@ -6,7 +6,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   " Plug 'scrooloose/nerdtree'
-  " Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'ctrlpvim/ctrlp.vim'
   Plug 'mattn/emmet-vim'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-repeat'
@@ -64,6 +64,9 @@ call plug#begin('~/.config/nvim/plugged')
 
   " file tree
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'kristijanhusak/defx-icons'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 't9md/vim-choosewin'
 
   " Markdown preview
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }

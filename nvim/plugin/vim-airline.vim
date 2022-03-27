@@ -10,10 +10,11 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 "===== replace default theme =====
 " let g:airline_theme='molokai'
 " let g:airline_theme='distinguished'
-let g:airline_theme='zenburn'
+" let g:airline_theme='zenburn'
 " let g:airline_theme='base16'
+let g:airline_theme='gruvbox'
 
-let g:airline_solarized_bg='dark'
+let g:airline_bg='light'
 
 "===== display buffer number in tab =====
 " let g:airline#extensions#tabline#buffer_idx_mode = 0
