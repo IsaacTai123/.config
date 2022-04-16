@@ -20,13 +20,21 @@ call plug#begin('~/.config/nvim/plugged')
 
   " for general purpose development
   Plug 'tomtom/tcomment_vim'
+
+  " These four seem to be together: <MarcWeber and tlib_vim> are 'snippets' Library
   Plug 'MarcWeber/vim-addon-mw-utils'
   Plug 'tomtom/tlib_vim'
   Plug 'garbas/vim-snipmate'
   Plug 'honza/vim-snippets'
+
   Plug 'majutsushi/tagbar'
   Plug 'mileszs/ack.vim'
+
+  " Git in vim.
   Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'  
+  Plug 'tpope/vim-rhubarb'
+  Plug 'junegunn/gv.vim'
 
   " for ruby/rails development
   " Plug 'vim-ruby/vim-ruby'
@@ -40,7 +48,7 @@ call plug#begin('~/.config/nvim/plugged')
   " Plug 'ycm-core/YouCompleteMe'
   " Plug 'tell-k/vim-autopep8'
   " Plug 'nvie/vim-flake8'
-  " Plug 'jiangmiao/auto-pairs'
+  Plug 'jiangmiao/auto-pairs'
   Plug 'kien/rainbow_parentheses.vim'
 
   " color theme
@@ -67,10 +75,23 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'kristijanhusak/defx-icons'
   Plug 'ryanoasis/vim-devicons'
   Plug 't9md/vim-choosewin'
+  Plug 'kristijanhusak/defx-git'
 
   " Markdown preview
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
   " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+  Plug 'preservim/vim-markdown'
 
+  " Which key for all the keybindings
+  Plug 'liuchengxu/vim-which-key'
+  
+  " Float Windows
+  Plug 'voldikss/vim-floaterm'
+
+  " Lazygit
+  Plug 'jesseduffield/lazygit'
+
+  " Quick Search for Text
+  Plug 'justinmk/vim-sneak'
 
 call plug#end()
