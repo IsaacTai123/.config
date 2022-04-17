@@ -91,7 +91,16 @@ let g:mkdp_page_title = '「${name}」'
 let g:mkdp_filetypes = ['markdown']
 
 
-nmap <C-s> <Plug>MarkdownPreview
+" nmap <C-s> <Plug>MarkdownPreview
 " M-s => opt + s
-nmap <M-s> <Plug>MarkdownPreviewStop
-nmap <C-p> <Plug>MarkdownPreviewToggle
+" nmap <M-s> <Plug>MarkdownPreviewStop
+" nmap <C-p> <Plug>MarkdownPreviewToggle
+
+
+
+" ========================================================
+" preservim/vim-markdown 
+" GitHub link: https://www.youtube.com/watch?v=22JAs0kNA9k
+" ========================================================
+autocmd FileType markdown normal zR
+autocmd FileType markdown set conceallevel=0

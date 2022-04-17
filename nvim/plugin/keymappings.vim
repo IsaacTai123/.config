@@ -16,7 +16,7 @@ inoremap <RIGHT> <NOP>
 " remap some key for easy access
 inoremap jk <Esc>
 inoremap jj <Esc>
-vnoremap <space><space> <Esc>
+" vnoremap <space><space> <Esc>
 nnoremap <Leader>j o<Esc>
 nnoremap <Leader>k O<Esc> 
 nnoremap <leader>w :wa<CR>
@@ -26,7 +26,8 @@ nnoremap H ^
 nnoremap L $
 " nnoremap <leader>d :e .<CR>
 " nnoremap <leader>e :Explore<CR>
-nnoremap <leader>cb :bd<CR>
+" nnoremap <leader>cb :bd<CR>
+nnoremap gg gg
 
 "resize window
 nnoremap <M-l> <C-w><<CR>
@@ -43,15 +44,16 @@ nnoremap <C-H> <C-W><C-H>
 map <M-v> <C-W>v
 map <M-s> <C-W>s
 map Q <C-W>q
+map XX :q!<CR>
 map <C-o> <C-w>o
 
 "copy and paste
 vnoremap <C-c> "*y :let @+=@*<CR>
-map <leader><C-v> "+P
+" map <leader><C-v> "+P
 
 "map FZF
-noremap <leader>f :Files<CR>
-noremap <leader>b :Buffers<CR>
+" noremap <leader>f :Files<CR>
+" noremap <leader>b :Buffers<CR>
 " noremap <C-n> :Files<CR>
 " noremap <silent> <M-b> :m :Buffers<CR>
 "
@@ -71,3 +73,13 @@ noremap [b :bprevious<CR>
 
 " Show all open buffers and their status
 " nmap <leader>bl :ls<CR>
+"
+"
+" ==============================
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
+
+" jump to the next function
+nnoremap <silent> ]f :call search('\(\(if\\|for\\|while\\|switch\\|catch\)\_s*\)\@64<!(\_[^)]*)\_[^;{}()]*\zs{', "w")<CR>
+" jump to the previous function
+nnoremap <silent> [f :call search('\(\(if\\|for\\|while\\|switch\\|catch\)\_s*\)\@64<!(\_[^)]*)\_[^;{}()]*\zs{', "bw")<CR>
