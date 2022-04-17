@@ -75,23 +75,10 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'kristijanhusak/defx-icons'
   Plug 'ryanoasis/vim-devicons'
   Plug 't9md/vim-choosewin'
-  Plug 'kristijanhusak/defx-git'
 
   " Markdown preview
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
   " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
-  Plug 'preservim/vim-markdown'
 
-  " Which key for all the keybindings
-  Plug 'liuchengxu/vim-which-key'
-  
-  " Float Windows
-  Plug 'voldikss/vim-floaterm'
-
-  " Lazygit
-  Plug 'jesseduffield/lazygit'
-
-  " Quick Search for Text
-  Plug 'justinmk/vim-sneak'
 
 call plug#end()
