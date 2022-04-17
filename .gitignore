@@ -16,3 +16,6 @@ ranger/plugins/__pycache__
 mc/
 nvim/plugged
 coc/
+tags
+lazygit/
+lazydocker/
