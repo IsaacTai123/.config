@@ -2,6 +2,7 @@
 " key mapping
 "--------------
 let mapleader = ","
+let maplocalleader = "\<Space>"
 
 "--------------
 " appearance
@@ -13,7 +14,9 @@ set showcmd            " display command
 set nolist             " do not display invisible characters
 set wrap              
 set linebreak
-" set cursorline
+set cursorline
+" set cursorcolumn
+" set cursorcolumn cterm=none ctermbg=21 ctermfg=White
 set ruler
 set showtabline=4
 set shortmess=I       " remove splash wording
@@ -23,6 +26,15 @@ let &showbreak='↳ '
 set conceallevel=0    " so i can see `` in markdown file
 set nobackup          " this is recommand by coc
 set nowritebackup     " this is recommand by coc
+set wildmenu
+set wildmode=full,full
+" set backspace=2       " enable backspace回刪
+set backspace=indent,eol,start  "more powerful backspacing
+set previewheight=15
+set pumheight=6       " Set pop up windows max hieght
+
+" for markdown syntax
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 "--------------
 " split window
