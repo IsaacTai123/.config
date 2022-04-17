@@ -55,8 +55,8 @@
 "       \ -buffer-name=tab`tabpagenr()`
 "       \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
 
-nnoremap <silent><leader>d :<C-u>Defx -listed -resume
-      \ -columns=mark:indent:indent:icons:space:filename
+nnoremap <silent>;f :<C-u>Defx -listed -resume
+      \ -columns=mark:indent:indent:icons:space:filename:git
       \ -buffer-name=tab`tabpagenr()`
       \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
 
@@ -167,3 +167,6 @@ hi DefxIconsOpenedTreeIcon guifg=#FF0000
 " For vim-choosewin
 let g:choosewin_overlay_enable = 1
 
+"==================================================================
+" Edit defx-git for Untrack file icon to be red
+hi Defx_git_Untracked guifg=#FF0000
