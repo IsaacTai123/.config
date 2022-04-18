@@ -82,6 +82,9 @@ try
 catch
 endtry
 
+" autocmd BufEnter *.md silent :colorscheme horizon
+" autocmd BufLeave *.md silent :colorscheme gruvbox
+
 
 "--------------
 " Sound
@@ -125,3 +128,9 @@ scriptencoding utf-8
 "change background to transparent
 "---------
 " hi Normal guibg=NONE ctermbg=NONE
+
+"==============
+"tags Settings
+"==============
+" set tags=$HOME/tags
+

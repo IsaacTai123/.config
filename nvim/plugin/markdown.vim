@@ -95,7 +95,7 @@ let g:mkdp_filetypes = ['markdown']
 " M-s => opt + s
 " nmap <M-s> <Plug>MarkdownPreviewStop
 " nmap <C-p> <Plug>MarkdownPreviewToggle
-
+nnoremap ]H :<Plug>Markdown_MoveToCurHeader<CR>
 
 
 " ========================================================

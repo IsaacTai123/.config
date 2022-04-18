@@ -169,12 +169,41 @@ let g:which_key_map_space.o = {
       \ 's' : [':MarkdownPreviewStop', 'Stop markdown preview'],
       \ ']f' : ['', 'move next function'],
       \ '[f' : ['', 'move prev function'],
+      \ 'g' : [':Goyo 70%x85%', 'enable goyo reading'],
+      \ 'cg' : [':Goyo!', 'close goyo reading'],
       \}
 
 let g:which_key_map_space.m = {
       \ 'name' : '+markdown',
       \ 'p' : [':MarkdownPreview', 'Start markdown preview'],
       \ 's' : [':MarkdownPreviewStop', 'Stop markdown preview'],
+      \ 'ge' : ['<Plug>Markdown_EditUrlUnderCursor', 'open link under cursor for vim edit'],
+      \ 'n' : ['<Plug>Markdown_MoveToNextHeader', 'move to next header ]]'],
+      \ 'b' : ['<Plug>Markdown_MoveToPreviousHeader', 'move to prev header [['],
+      \ 'sn' : ['<Plug>Markdown_MoveToNextSiblingHeader', 'move to next sibling header ]['],
+      \ 'sp' : ['<Plug>Markdown_MoveToPreviousSiblingHeader', 'move to prev sibling header []'],
+      \ 'ch' : ['<Plug>Markdown_MoveToCurHeader', 'move to current header ]h'],
+      \ '.' : ['<Plug>Markdown_MoveToParentHeader', 'move to parent header ]u'],
+      \ 'd' : [':HeaderDecrease', 'decrease level of all header'],
+      \ 'i' : [':HeaderIncrease', 'increase level of all header'],
+      \ 'f' : [':TableFormat', 'format table under cursor'],
+      \ 'q' : [':Toc', 'quick fix - vertical'],
+      \ 'h' : [':Toch', 'quick fix - horizontal'],
+      \ 'w' : [':Toct', 'quick fix - new tab'],
+      \ 't' : [':InsertToc', 'insert table of contents'],
+      \ 'l' : [':InsertToc', 'insert numbered list'],
+      \}
+
+
+let g:which_key_map_space.p = {
+      \ 'name' : '+md-table-mode',
+      \ 'e' : [':TableModeEnable', 'enable table mode'],
+      \ 't' : [':TableModeToggle', 'toggle table mode'],
+      \ 'd' : [':TableModeDisable', 'disable table mode'],
+      \ 'r' : [':TableModeRealign', 'table realign'],
+      \ 's' : [':TableSort', 'table sort'],
+      \ 'c' : [':Tableize', 'create table with exist content'],
+      \ 'f' : [':TableEvalFormulaLine', 'evaluate the formula line'],
       \}
 
 
@@ -211,7 +240,8 @@ let g:which_key_map_space.t = {
       \ 's' : [':FloatermShow', 'Show Floaterm Win'],
       \ 't' : [':FloatermToggle', 'Toggle Floaterm Win'],
       \ 'u' : [':FloatermUpdate', 'Update Floaterm Win'],
-      \ 'g' : [':FloatermNew --height=0.8 --width=0.8 --wintype=float --name=lazygit --position=center --autoclose=1 lazygit', 'lazygit'],
+      \ 'g' : [':FloatermNew --height=0.9 --width=0.9 --wintype=float --name=lazygit --position=center --autoclose=1 lazygit', 'lazygit'],
+      \ 'T' : [':FloatermNew --height=0.95 --width=0.98 --wintype=float --name=tig --position=center --autoclose=1 tig', 'Tig'],
       \ 'H' : [':FloatermNew --height=0.8 --width=0.8 --wintype=float --name=htop --position=center --autoclose=1 htop', 'htop'],
       \ 'P' : [':FloatermNew --height=0.8 --width=0.8 --wintype=float --name=python --position=center --autoclose=1 python3', 'python'],
       \ 'N' : [':FloatermNew --height=0.8 --width=0.8 --wintype=float --name=node --position=center --autoclose=1 node', 'node.js'],

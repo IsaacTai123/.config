@@ -54,6 +54,10 @@ call plug#begin('~/.config/nvim/plugged')
   " color theme
   " Plug 'rakr/vim-one'
   Plug 'morhetz/gruvbox'
+  Plug 'ntk148v/vim-horizon'
+
+  " vim table quick format
+  Plug 'dhruvasagar/vim-table-mode'
 
   " javascript syntax
   Plug 'pangloss/vim-javascript'
@@ -93,5 +97,8 @@ call plug#begin('~/.config/nvim/plugged')
 
   " Quick Search for Text
   Plug 'justinmk/vim-sneak'
+
+  " focus reading in vim
+  Plug 'junegunn/goyo.vim'
 
 call plug#end()
