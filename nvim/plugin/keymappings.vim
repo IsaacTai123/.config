@@ -28,6 +28,7 @@ nnoremap L $
 " nnoremap <leader>e :Explore<CR>
 " nnoremap <leader>cb :bd<CR>
 nnoremap gg gg
+vnoremap gg gg
 
 "resize window
 nnoremap <M-l> <C-w><<CR>

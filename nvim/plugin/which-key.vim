@@ -232,7 +232,8 @@ let g:which_key_map_space.g = {
 
 let g:which_key_map_space.t = {
       \ 'name' : '+floaterm',
-      \ ';' : [':FloatermNew', 'New Floaterm Win'],
+      \ '/' : [':FloatermNew --cwd=<root>', 'New Floaterm Win'],
+      \ ';' : [':FloatermNew --cwd=<buffer>', 'New Floaterm Win'],
       \ 'h' : [':FloatermHide', 'Hide Floaterm Win'],
       \ 'n' : [':FloatermNext', 'Next Floaterm Win'],
       \ 'k' : [':FloatermKill', 'Kill Floaterm Win'],
@@ -240,8 +241,10 @@ let g:which_key_map_space.t = {
       \ 's' : [':FloatermShow', 'Show Floaterm Win'],
       \ 't' : [':FloatermToggle', 'Toggle Floaterm Win'],
       \ 'u' : [':FloatermUpdate', 'Update Floaterm Win'],
+      \ '.' : [':FloatermNew! --height=0.15 --width=0.98 --wintype=normal --name=terminal --position=bottom --autoclose=1 cd %:p:h', 'terminal'],
+      \ 'r' : [':FloatermNew --height=0.9 --width=0.9 --wintype=float --name=ranger --position=center --autoclose=1 ranger', 'ranger'],
       \ 'g' : [':FloatermNew --height=0.9 --width=0.9 --wintype=float --name=lazygit --position=center --autoclose=1 lazygit', 'lazygit'],
-      \ 'T' : [':FloatermNew --height=0.95 --width=0.98 --wintype=float --name=tig --position=center --autoclose=1 tig', 'Tig'],
+      \ 'T' : [':FloatermNew --height=0.95 --width=0.95 --wintype=float --name=tig --position=center --autoclose=1 tig', 'Tig'],
       \ 'H' : [':FloatermNew --height=0.8 --width=0.8 --wintype=float --name=htop --position=center --autoclose=1 htop', 'htop'],
       \ 'P' : [':FloatermNew --height=0.8 --width=0.8 --wintype=float --name=python --position=center --autoclose=1 python3', 'python'],
       \ 'N' : [':FloatermNew --height=0.8 --width=0.8 --wintype=float --name=node --position=center --autoclose=1 node', 'node.js'],
