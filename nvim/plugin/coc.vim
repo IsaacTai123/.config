@@ -33,7 +33,7 @@ endfunction
 
 " Use <c-space> to trigger completion.
 if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
+  inoremap <silent><expr> <c-a> coc#refresh()
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
@@ -173,4 +173,4 @@ nnoremap <silent><nowait> <space>cp  :<C-u>CocListResume<CR>
 
 "===============================================
 " Show signature help on placeholder jump
-autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+" autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')

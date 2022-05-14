@@ -7,6 +7,7 @@ let g:coc_global_extensions = [
       \    'coc-snippets',
       \    'coc-pyright',
       \    'coc-prettier',
+      \    'coc-pairs',
       \    'coc-highlight',
       \    'coc-yaml',
       \    '@yaegassy/coc-intelephense',
@@ -15,5 +16,7 @@ let g:coc_global_extensions = [
       \    'coc-emmet',
       \    'coc-html',
       \    'coc-vimlsp',
-      \    'coc-phpls'
+      \    'coc-phpls',
+      \    'coc-diagnostic',
+      \    'coc-docker'
       \  ]

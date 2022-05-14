@@ -121,8 +121,8 @@ let g:which_key_map_space.w = {
       \ 'L' : ['<C-W>5>'    , 'expand-window-right']   ,
       \ 'K' : [':esize -5'  , 'expand-window-up']      ,
       \ '=' : ['<C-W>='     , 'balance-window']        ,
-      \ 's' : ['<C-W>s'     , 'split-window-below']    ,
-      \ 'v' : ['<C-W>v'     , 'split-window-below']    ,
+      \ 's' : ['<C-W>s'     , 'horizon split-window']    ,
+      \ 'v' : ['<C-W>v'     , 'vertical split-window']    ,
       \ '?' : ['Windows'    , 'fzf-window']            ,
       \ }
 
@@ -169,8 +169,8 @@ let g:which_key_map_space.o = {
       \ 's' : [':MarkdownPreviewStop', 'Stop markdown preview'],
       \ ']f' : ['', 'move next function'],
       \ '[f' : ['', 'move prev function'],
-      \ 'g' : [':Goyo 70%x85%', 'enable goyo reading'],
-      \ 'cg' : [':Goyo!', 'close goyo reading'],
+      \ 'g' : [':Goyo 70%x85%', 'goyo enable reading'],
+      \ 'c' : [':Goyo!', 'goyo close reading'],
       \}
 
 let g:which_key_map_space.m = {
@@ -233,7 +233,7 @@ let g:which_key_map_space.g = {
 let g:which_key_map_space.t = {
       \ 'name' : '+floaterm',
       \ '/' : [':FloatermNew --cwd=<root>', 'New Floaterm Win'],
-      \ ';' : [':FloatermNew --cwd=<buffer>', 'New Floaterm Win'],
+      \ ';' : [':FloatermNew! cd %:p:h', 'New Floaterm Win'],
       \ 'h' : [':FloatermHide', 'Hide Floaterm Win'],
       \ 'n' : [':FloatermNext', 'Next Floaterm Win'],
       \ 'k' : [':FloatermKill', 'Kill Floaterm Win'],

@@ -20,7 +20,7 @@
       }
     }
   },
-
+  "diagnostic.checkCurrentLine": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "json",
     "css",
@@ -29,12 +29,8 @@
     "html",
     "yaml"
   ],
-
-  //python config
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
-
-  //coc config
   "suggest.floatConfig": {
     "border": true
   }
