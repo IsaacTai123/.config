@@ -5,8 +5,8 @@ call plug#begin('~/.config/nvim/plugged')
 
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  " Plug 'scrooloose/nerdtree'
-  Plug 'ctrlpvim/ctrlp.vim'
+
+  Plug 'ctrlpvim/ctrlp.vim' 
   Plug 'mattn/emmet-vim'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-repeat'
@@ -14,6 +14,11 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'airblade/vim-rooter' "add the project concept to fzf. let you to search within whole project.
+
+  " NerdTree setting
+  " Plug 'scrooloose/nerdtree'
+  " Plug 'Xuyuanp/nerdtree-git-plugin'
+  " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
   " Show indentation
   Plug 'Yggdroot/indentLine'
@@ -36,6 +41,9 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tpope/vim-rhubarb'
   Plug 'junegunn/gv.vim'
 
+  " html
+  Plug 'AndrewRadev/tagalong.vim'
+
   " for ruby/rails development
   " Plug 'vim-ruby/vim-ruby'
   " Plug 'tpope/vim-rails'
@@ -52,15 +60,24 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'kien/rainbow_parentheses.vim'
 
   " color theme
-  " Plug 'rakr/vim-one'
+  Plug 'rakr/vim-one'
+  Plug 'chriskempson/base16-vim'
   Plug 'morhetz/gruvbox'
+  " Plug 'lifepillar/vim-gruvbox8'
+  " Plug 'ellisonleao/gruvbox.nvim'
+  Plug 'HerringtonDarkholme/yats.vim' "TS Syntax
   Plug 'ntk148v/vim-horizon'
+  Plug 'sheerun/vim-polyglot'
 
   " vim table quick format
   Plug 'dhruvasagar/vim-table-mode'
 
   " javascript syntax
-  Plug 'pangloss/vim-javascript'
+  " Plug 'pangloss/vim-javascript'
+  " Plug 'jelera/vim-javascript-syntax'
+  " Plug 'neoclide/vim-jsx-improve'
+  Plug 'MaxMEllon/vim-jsx-pretty'
+  Plug 'othree/yajs.vim'
 
   " css3 syntax highlight
   Plug 'hail2u/vim-css3-syntax'
