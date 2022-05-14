@@ -44,7 +44,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 map <M-v> <C-W>v
 map <M-s> <C-W>s
-map Q <C-W>q
+map Q :q<CR>
 map XX :q!<CR>
 map <C-o> <C-w>o
 
