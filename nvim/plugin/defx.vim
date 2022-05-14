@@ -71,7 +71,7 @@ autocmd FileType defx call s:defx_my_settings()
 	  \ defx#do_action('copy')
 	  nnoremap <silent><buffer><expr> dd
 	  \ defx#do_action('move')
-	  nnoremap <silent>buffer><expr> pp
+	  nnoremap <silent><buffer><expr> pp
 	  \ defx#do_action('paste')
 	  nnoremap <silent><buffer><expr> l
 	  \ defx#do_action('open')

@@ -13,3 +13,9 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" map to cmd p  <but have to diable the defult short cut for mac>
+" Here is add a keybindings directly to iterm2 to map cmd + p to CtrlP cmd
+nnoremap <D-p> :CtrlP<cr>
+
+"ignore all the file that are ignore by git
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
