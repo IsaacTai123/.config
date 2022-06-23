@@ -24,3 +24,6 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 
 
 let middle_click_preserves_windows = 0
+
+" ignore spcace/tab check
+let g:airline#extensions#whitespace#enabled = 0

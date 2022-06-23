@@ -1,24 +1,27 @@
-"--------------
+"=================
 " key mapping
-"--------------
+"=================
 let mapleader = ","
 let maplocalleader = "\<Space>"
 
-"--------------
+"=================
 " appearance
-"--------------
+"=================
+set cmdheight=1        " default set terminal to 1
 set number             " show line number
 set relativenumber
 set noshowmode         " disable mode(because of Vim-Airline)
 set showcmd            " display command
 set nolist             " do not display invisible characters
-set wrap              
+set wrap               " if the line go off the screen it will appears on the next line
 set linebreak
 set cursorline
+set incsearch          " stands for incremental search while you search you actually get results highlight.
+set ignorecase         " ignore the case sensitive
 " set cursorcolumn
 " set cursorcolumn cterm=none ctermbg=21 ctermfg=White
 set ruler
-set showtabline=4
+set showtabline=4     "Tab Line 永遠都開著 即便只有一個檔案 2 = always
 set shortmess=I       " remove splash wording
 set equalalways       " split windows are always equal size
 set statusline+=%F    " show path in vim
@@ -29,51 +32,55 @@ set nowritebackup     " this is recommand by coc
 set wildmenu
 set wildmode=full,full
 " set backspace=2       " enable backspace回刪
-set backspace=indent,eol,start  "more powerful backspacing
+set backspace=indent,eol,start  "https://til.hashrocket.com/posts/f5531b6da0-backspace-options
 set previewheight=15
 set pumheight=6       " Set pop up windows max hieght
 set spell "enable spellchecking
+"set undofile=~/.vim/undodir  "directory where my undofile will be.
 
 " for markdown syntax
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 
-"--------------
+"=================
 " Folding Options
-"--------------
-set foldmethod=indent
+"=================
+set foldmethod=manual
 set foldnestmax=3
+set foldlevel=99
 set nofoldenable  " disable folding by default
 
-"--------------
+"=================
 " split window
-"--------------
-set splitbelow
-set splitright
+"=================
+set splitbelow    " open a horizontally windows it will show at the bottom
+set splitright    " open a vertically windows it will show at the right side
 
-"--------------
+"=================
 " Scroll
-"--------------
+"=================
 set scrolloff=5
 
-"--------------
+"=================
 " Tab and space
 " (set tab key to 4 space)
-"--------------
-set softtabstop=2
-set shiftwidth=2
+"=================
+set softtabstop=2    
+set shiftwidth=2     "setting the > only will take 2 space
 set expandtab        " Converts tabs to space
-" set tabstop=4
-" set softtabstop=0 noexpandtab
+" set tabstop=4      "tabstop means 4 characters, 
+" set softtabstop=0  "softtabstop means 4 spaces
+" set noexpandtab    "no converted from a tab character to spaces.
 " set shiftwidth=4
+" set smartindent    "means it will try its best job to indent for you
 filetype plugin indent on
 
-"--------------
+"=================
 " ColorScheme
-"--------------
+"=================
 set t_Co=256  " Number of colors
 " set termguicolors
-syntax on
+syntax on     " give you some basic highlighting
 syntax enable
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
@@ -110,55 +117,67 @@ endtry
 " autocmd BufLeave *.html silent :colorscheme gruvbox
 
 
-"--------------
+"=================
 " Sound
-"--------------
+"=================
 " disable sound on errors
 set visualbell
-set noerrorbells
+set noerrorbells  "turn off the errorbells
 set t_vb=
 set tm=500
 
-"--------------
+"=================
 " Netrw
-"--------------
+"=================
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 
-"--------------
+"=================
 " Settings
-"--------------
+"=================
 set nocompatible
-set clipboard=unnamed
-set noswapfile
+set clipboard=unnamed " 就可以讓yank 複製的東西也貼到剪貼版 讓兩邊可以通用
+set noswapfile        " don't create a .swp file
 set hidden
 set nobomb            " no BOM(Byte Order Mark)
 set mouse=a
 set omnifunc=syntaxcomplete#Complete  " 這個可以讓你啟用vim 自帶的autocomplete. 要啟用這個功能我們要用 ctrl+x+o && ctrl+n
 
-"--------------
+"=================
 " Filetype and Encoding
-"--------------
-filetype on
-filetype indent on
-filetype plugin on
+"=================
+filetype on           " this will open the filetype search auto
+filetype indent on    "this will see what the filetype it is and us the indentation of that filetype
+filetype plugin on    "根據程式語言種類載入相對的外掛plugin
 
+"=================
 " file encoding
-" set encoding=utf-8
-" scriptencoding utf-8
-"
+"=================
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
 
 
-"---------
+"=================
 "change background to transparent
-"---------
+"=================
 " hi Normal guibg=NONE ctermbg=NONE
 
-"==============
+"=================
 "tags Settings
-"==============
+"=================
 " set tags=$HOME/tags
+
+
+"--------------
+" search
+"--------------
+set hlsearch    " highlight matching characters while search
+set ignorecase  " case insensitive while searching
+set incsearch   " incremental search
+set smartcase   " search will be case-sensitive while searching with some upper case characters.
+
+" cancel search highlight if hit enter key after searching
+nnoremap <Enter> :nohlsearch<Enter><Enter>
+
 
