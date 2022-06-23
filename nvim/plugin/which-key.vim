@@ -186,37 +186,19 @@ let g:which_key_map_space.w = {
       \ '-' : ['<C-W>s'     , 'split-window-below']    ,
       \ '|' : ['<C-W>v'     , 'split-window-right']    ,
       \ '2' : ['<C-W>v'     , 'layout-double-columns'] ,
-      \ 'h' : ['<C-W>h'     , 'window-left']           ,
-      \ 'j' : ['<C-W>j'     , 'window-below']          ,
-      \ 'l' : ['<C-W>l'     , 'window-right']          ,
-      \ 'k' : ['<C-W>k'     , 'window-up']             ,
-      \ 'H' : ['<C-W>5<'    , 'expand-window-left']    ,
-      \ 'J' : [':resize +5' , 'expand-window-below']   ,
-      \ 'L' : ['<C-W>5>'    , 'expand-window-right']   ,
-      \ 'K' : [':esize -5'  , 'expand-window-up']      ,
+      \ 'h' : ['<C-W>2<'    , 'expand-window-left']    ,
+      \ 'j' : ['<C-W>2-'    , 'expand-window-below']   ,
+      \ 'l' : ['<C-W>2>'    , 'expand-window-right']   ,
+      \ 'k' : ['<C-W>2+'    , 'expand-window-up']      ,
       \ '=' : ['<C-W>='     , 'balance-window']        ,
-      \ 's' : ['<C-W>s'     , 'horizon split-window']    ,
-      \ 'v' : ['<C-W>v'     , 'vertical split-window']    ,
+      \ 's' : ['<C-W>s'     , 'horizon split-window']  ,
+      \ 'v' : ['<C-W>v'     , 'vertical split-window'] ,
       \ '?' : ['Windows'    , 'fzf-window']            ,
       \ }
-
-" let g:which_key_map_space[','] = {
-"       \ 'name' : '+command' ,
-"       \ '' : [':'     , 'other-window'],
-"       \ 'w' : ['o'     , 'other-window'],
-"       \ 'w' : ['o'     , 'other-window'],
-"       \ 'w' : ['o'     , 'other-window'],
-"       \ 'w' : ['o'     , 'other-window'],
-"       \ 'w' : ['o'     , 'other-window'],
-"       \ 'w' : ['o'     , 'other-window'],
-"       \ 'w' : ['o'     , 'other-window'],
-"       \ 'w' : ['o'     , 'other-window'],
-"       \ 'w' : ['o'     , 'other-window'],
-"       \ 'w' : ['o'     , 'other-window'],
-"       \ 'w' : ['o'     , 'other-window'],
-"       \ 'w' : ['o'     , 'other-window'],
-"       \ 'w' : ['o'     , 'other-window'],
-"       \}
+" \ 'h' : ['<C-W>h'     , 'window-left']           ,
+" \ 'j' : ['<C-W>j'     , 'window-below']          ,
+" \ 'l' : ['<C-W>l'     , 'window-right']          ,
+" \ 'k' : ['<C-W>k'     , 'window-up']             ,
 
 let g:which_key_map_space.f = {
       \ 'name' : '+fzf',
@@ -303,6 +285,16 @@ let g:which_key_map_space.g = {
       \ 'H' : [':Gblame', 'show all history'],
       \}
 
+let g:which_key_map_space.v = {
+      \ 'name' : '+vim',
+      \ 's' : [':set fdm=syntax', 'fdm syntax'],
+      \ 'i' : [':set fdm=indent', 'fdm indent'],
+      \ 'm' : [':set fdm=manual', 'fdm manual'],
+      \ 'M' : [':set fdm=mark', 'fdm mark'],
+      \ 'd' : [':set fdm=diff', 'fdm diff'],
+      \ 'c' : [':set fdm?', 'current fdm'],
+      \}
+
 
 let g:which_key_map_space.t = {
       \ 'name' : '+floaterm',
@@ -364,6 +356,13 @@ let g:which_key_map_space.s = {
 "
 let g:which_key_map_g = {
       \ 'name' : '+g-command',
+      \ 'g' : 'Jump to startUpLine',
+      \ 'h' : 'Sneak back',
+      \ 'l' : 'Sneak next',
+      \ '<C-N>' : 'multi cursor#new',
+      \ '<M-n>' : 'multi cursor#selectAll',
+      \ 'x' : 'open url in browser',
+      \ 'xx' : 'open github for vimplug',
       \ '.' : 'Coc command repeat',
       \ '[' : 'Coc diagnostic prev',
       \ ']' : 'Coc diagnostic next',
@@ -385,13 +384,6 @@ let g:which_key_map_g = {
       \ '>b' : 'TComment comment block',
       \ 'c' : 'TComment toggle',
       \ 'c3c' : 'comment with 3" (TComment)',
-      \ 'g' : 'Jump to startUpLine',
-      \ 'h' : 'Sneak back',
-      \ 'l' : 'Sneak next',
-      \ '<C-N>' : 'multi cursor#new',
-      \ '<M-n>' : 'multi cursor#selectAll',
-      \ 'x' : 'open url in browser',
-      \ 'xx' : 'open github for vimplug',
       \ }
 
 " let g:which_key_map_g.c = {
@@ -413,5 +405,14 @@ let g:which_key_map_g = {
 "       \ ';' : 'Coc show documentation',
 "                   \}
 "
+" let g:which_key_map_g.t = {
+"       \ 'name' : '+t-command',
+"       \ '<' : 'TComment uncomment',
+"       \ '>' : 'TComment comment',
+"       \ '<b' : 'TComment uncomment block',
+"       \ '>b' : 'TComment comment block',
+"       \ 'c' : 'TComment toggle',
+"       \ 'c3c' : 'comment with 3" (TComment)',
+"       \}
 
 "
