@@ -29,7 +29,7 @@ call plug#begin('~/.config/nvim/plugged')
   " These four seem to be together: <MarcWeber and tlib_vim> are 'snippets' Library
   Plug 'MarcWeber/vim-addon-mw-utils'
   Plug 'tomtom/tlib_vim'
-  Plug 'garbas/vim-snipmate'
+  " Plug 'garbas/vim-snipmate'
   Plug 'honza/vim-snippets'
 
   Plug 'majutsushi/tagbar'

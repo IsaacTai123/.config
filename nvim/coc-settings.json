@@ -46,4 +46,8 @@
   "explorer.git.icon.status.added": "+",
   "explorer.git.icon.status.ignored": "✗",
 
+  // snippets
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips"
+
+
 }
