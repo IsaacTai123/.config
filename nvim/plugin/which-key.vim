@@ -227,6 +227,7 @@ let g:which_key_map_space.o = {
       \ '[f' : ['', 'move prev function'],
       \ 'g' : [':Goyo 70%x85%', 'goyo enable reading'],
       \ 'c' : [':Goyo!', 'goyo close reading'],
+      \ 'f' : [':call flake8#Flake8ShowError()', 'flake8 show error'],
       \}
 
 let g:which_key_map_space.m = {
