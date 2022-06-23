@@ -19,7 +19,8 @@ call plug#begin('~/.config/nvim/plugged')
   " Plug 'scrooloose/nerdtree'
   " Plug 'Xuyuanp/nerdtree-git-plugin'
   " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
+  
+  
   " Show indentation
   Plug 'Yggdroot/indentLine'
 
@@ -54,8 +55,8 @@ call plug#begin('~/.config/nvim/plugged')
 
   " for Pythone
   " Plug 'ycm-core/YouCompleteMe'
-  " Plug 'tell-k/vim-autopep8'
-  " Plug 'nvie/vim-flake8'
+  Plug 'tell-k/vim-autopep8'
+  Plug 'nvie/vim-flake8'
   Plug 'jiangmiao/auto-pairs'
   Plug 'kien/rainbow_parentheses.vim'
 
