@@ -161,6 +161,24 @@ function! Show_documentation()
 endfunction
 
 
+let g:which_key_map_space.e = {
+      \ 'name' : '+coc-explorer-presets' ,
+      \ 'e' : [':CocCommand explorer', 'coc file explore'],
+      \ 'f' : [':CocCommand explorer --preset floating', 'coc file explore float'],
+      \ 't' : [':CocCommand explorer --preset floatingTop', 'coc open floatingTop'],
+      \ 'l' : [':CocCommand explorer --preset floatingLeftside', 'coc open floatingLeftside'],
+      \ 'r' : [':CocCommand explorer --preset floatingRightside', 'coc open floatingRightside'],
+      \ 'n' : [':CocCommand explorer --preset .nvim', 'coc nvim folder'],
+      \ 'c' : [':CocCommand explorer --preset cocConfig', 'coc cocConfig folder'],
+      \ 'b' : [':CocCommand explorer --preset buffer', 'coc open buffer'],
+      \ 's' : [':CocCommand explorer --preset simplify', 'coc open simplify'],
+      \ 'w' : [':CocCommand explorer --preset web', 'coc open Web'],
+      \ 'd' : [':CocCommand explorer --preset workDocument', 'coc open WorkDocument'],
+      \ 'm' : [':CocCommand explorer --preset myDocument', 'coc open MyDocument'],
+      \ 'L' : [':CocList explPresets', 'coc list all presets'],
+      \}
+
+
 let g:which_key_map_space.w = {
       \ 'name' : '+windows' ,
       \ 'w' : ['<C-W>w'     , 'other-window']          ,
