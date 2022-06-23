@@ -31,7 +31,8 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Use <c-space> to trigger completion.
+" Use <c-space> to trigger completion. (I change to Ctrl + a to trigger
+" completion)
 if has('nvim')
   inoremap <silent><expr> <c-a> coc#refresh()
 else
@@ -239,4 +240,4 @@ let g:coc_explorer_global_presets = {
 
 "===============================================
 " Show signature help on placeholder jump
-" autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')

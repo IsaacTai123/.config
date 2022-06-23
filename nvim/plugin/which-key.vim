@@ -57,52 +57,86 @@ let g:which_key_map_space.b = {
       \ 'p' : [':bprevious' , 'previous-buffer'] ,
       \ }
 
+" let g:which_key_map_space.c = {
+"       \ 'name' : '+coc' ,
+"       \ 'd' : [':CocList diagnostics', 'list diagnose'],
+"       \ 'e' : [':CocList extensions', 'list extensions'],
+"       \ 'c' : [':CocList commands', 'list commands'],
+"       \ 'o' : [':CocList outline', 'list outline'],
+"       \ 's' : [':CocList -I symbols', 'list symbols'],
+"       \ 'l' : [':CocList snippets', 'Coc snippets'],
+"       \ 'j' : [':CocNext', 'Coc next'],
+"       \ 'k' : [':CocPrev', 'Coc Previous'],
+"       \ 'p' : [':CocListResume', 'CocListResume'],
+"       \ 'm' : [':CocList marketplace', 'CocList marketplace'],
+"       \ 'a' : [':CocAction', 'Coc Action'],
+"       \ 'i' : [':CocInfo', 'Coc Info'],
+"       \ 'C' : [':CocConfig', 'Coc config'],
+"       \ }
+
+" let g:which_key_map_space.a = {
+"       \ 'name' : '+moreAction' ,
+"       \ 'n' : [':call CocAction("diagnosticNext")', 'Next diagnostic'],
+"       \ 'p' : [':call CocAction("diagnosticPrevious")', 'Prev diagnostic'],
+"       \ 'N' : [':call CocAction("diagnosticNextError")', 'Next error diagnostic'],
+"       \ 'P' : [':call CocAction("diagnosticPreviousError")', 'Prev error diagnostic'],
+"       \ 'd' : [':call CocAction("jumpDefinition")', 'Jump to definition'],
+"       \ 's' : [':call CocAction("jumpDeclaration")', 'Jump to declaration'],
+"       \ 't' : [':call CocAction("jumpTypeDefinition")', 'Type definition'],
+"       \ 'r' : [':call CocAction("jumpReferences")', 'Jump to reference'],
+"       \ 'i' : [':call CocAction("jumpImplementation")', 'Jump to implementation'],
+"       \ 'R' : [':call CocAction("rename")', 'coc rename'],
+"       \ 'c' : [':call CocAction("diagnosticInfo")', 'Show diagnostic of current position'],
+"       \ 'f' : [':call CocAction("format")', 'Format whojjle buffer'],
+"       \ 'x' : [':call CocAction("refactor")', 'Open Refactor win'],
+"       \}
+
 let g:which_key_map_space.l = {
-      \ 'name' : '+lsp',
-      \ 'f' : ['spacevim#lang#util#Format()'          , 'formatting']       ,
-      \ 'r' : ['spacevim#lang#util#FindReferences()'  , 'references']       ,
-      \ 'R' : ['spacevim#lang#util#Rename()'          , 'rename']           ,
-      \ 's' : ['spacevim#lang#util#DocumentSymbol()'  , 'document-symbol']  ,
-      \ 'S' : ['spacevim#lang#util#WorkspaceSymbol()' , 'workspace-symbol'] ,
-      \ 'g' : {
-        \ 'name': '+goto',
-        \ 'd' : ['spacevim#lang#util#Definition()'     , 'definition']      ,
-        \ 't' : ['spacevim#lang#util#TypeDefinition()' , 'type-definition'] ,
-        \ 'i' : ['spacevim#lang#util#Implementation()' , 'implementation']  ,
-        \ },
-      \ }
-
-let g:which_key_map_space.c = {
-      \ 'name' : '+coc' ,
-      \ 'a' : 'CocList diagnostics',
-      \ 'e' : 'CocList extensions',
-      \ 'c' : 'CocList commands',
-      \ 'o' : 'CocList outline',
-      \ 's' : 'CocList -I symbols',
-      \ 'j' : 'CocNext',
-      \ 'k' : 'CocPrev',
-      \ 'p' : 'CocListResume',
-      \ 'm' : [':CocList marketplace', 'CocList marketplace'],
-      \ 'A' : [':CocAction', 'Coc Action'],
-      \ 'i' : [':CocInfo', 'Coc Info'],
-      \ }
-
-let g:which_key_map_space.c[';'] = {
-      \ 'name' : '+moreAction' ,
-      \ 'n' : [':call CocAction("diagnosticNext")', 'Next diagnostic'],
-      \ 'p' : [':call CocAction("diagnosticPrevious")', 'Prev diagnostic'],
-      \ 'N' : [':call CocAction("diagnosticNextError")', 'Next error diagnostic'],
-      \ 'P' : [':call CocAction("diagnosticPreviousError")', 'Prev error diagnostic'],
-      \ 'd' : [':call CocAction("jumpDefinition")', 'Jump to definition'],
-      \ 's' : [':call CocAction("jumpDeclaration")', 'Jump to declaration'],
-      \ 't' : [':call CocAction("jumpTypeDefinition")', 'Type definition'],
-      \ 'r' : [':call CocAction("jumpReferences")', 'Jump to reference'],
-      \ 'i' : [':call CocAction("jumpImplementation")', 'Jump to implementation'],
-      \ 'R' : [':call CocAction("rename")', 'coc rename'],
-      \ 'c' : [':call CocAction("diagnosticInfo")', 'Show diagnostic of current position'],
-      \ 'f' : [':call CocAction("format")', 'Format whole buffer'],
-      \ 'x' : [':call CocAction("refactor")', 'Open Refactor win'],
+      \ 'name' : '+lsp' ,
+      \ '.' : [':CocConfig', 'CocConfig'],
+      \ 'w' : [':CocInfo', 'CocInfo'],
+      \ ';' : ['<Plug>(coc-refactor)', 'refactor'],
+      \ 'a' : ['<Plug>(coc-codeaction)', 'line action'],
+      \ 'A' : ['<Plug>(coc-codeaction-selected)', 'selected action'],
+      \ 'd' : ['<Plug>(coc-definition)', 'definition'],
+      \ 'D' : ['<Plug>(coc-declaration)', 'declaration'],
+      \ 'f' : ['<Plug>(coc-format-selected)', 'format selected'],
+      \ 'F' : ['<Plug>(coc-format)', 'format'],
+      \ 't' : ['<Plug>(coc-type-definition)', 'type definition'],
+      \ 'h' : ['<Plug>(coc-float-hide)', 'hide'],
+      \ 'i' : ['<Plug>(coc-implementation)', 'implementation'],
+      \ 'j' : ['<Plug>(coc-float-jump)', 'float jump'],
+      \ 'l' : ['<Plug>(coc-codelens-action)', 'code lens'],
+      \ 'n' : ['<Plug>(coc-diagnostic-next)', 'next diagnostic'],
+      \ 'N' : ['<Plug>(coc-diagnostic-next-error)', 'next error'],
+      \ 'o' : ['<Plug>(coc-openlink)', 'open link'],
+      \ 'M' : ['<Plug>(coc-rename)', 'rename'],
+      \ 'x' : ['<Plug>(coc-fix-current)', 'quickfix'],
+      \ 'R' : ['<Plug>(coc-command-repeat)', 'repeat'],
+      \ 'r' : ['<Plug>(coc-references)', 'references'],
+      \ 'b' : [':CocNext', 'next action'],
+      \ 'B' : [':CocPrev', 'prev action'],
+      \ 'O' : [':CocList outline', 'outline'],
+      \ 'e' : [':CocList extensions', 'extensions'],
+      \ 'I' : [':CocList diagnostics', 'diagnostics'],
+      \ 's' : [':CocList snippets', 'snippets'],
+      \ 'm' : [':CocList marketplace', 'marketplace'],
+      \ 'c' : [':CocList commands', 'commands'],
+      \ 'u' : [':CocListResume', 'resume list'],
+      \ 'k' : [':call Show_documentation()', 'show documentation'],
+      \ 'X' : [':CocDisable', 'Coc disable'],
+      \ 'E' : [':CocEnable', 'Coc enable'],
       \}
+
+function! Show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
 
 
 let g:which_key_map_space.w = {
@@ -320,5 +354,24 @@ let g:which_key_map_g = {
       \ 'xx' : 'open github for vimplug',
       \ }
 
+" let g:which_key_map_g.c = {
+"       \ 'name' : '+coc',
+"       \ '.' : 'Coc command repeat',
+"       \ '[' : 'Coc diagnostic prev',
+"       \ ']' : 'Coc diagnostic next',
+"       \ 'd' : 'Coc definition',
+"       \ 'i' : 'Coc implementation',
+"       \ 'r' : 'Coc references',
+"       \ 'y' : 'Coc type definition',
+"       \ 'f' : 'Coc format selected',
+"       \ 'n' : 'Coc rename',
+"       \ 'a' : 'Coc code action',
+"       \ 's' : 'Coc code action selected',
+"       \ 'k' : 'Coc range select',
+"       \ 'q' : 'Coc quick fix current',
+"       \ 'e' : 'Coc codelens action',
+"       \ ';' : 'Coc show documentation',
+"                   \}
+"
 
 "
