@@ -104,3 +104,9 @@ nnoremap ]H :<Plug>Markdown_MoveToCurHeader<CR>
 " ========================================================
 autocmd FileType markdown normal zR
 autocmd FileType markdown set conceallevel=0
+
+
+" =====================================
+" Flagging Unnecessary Whitespace
+" =====================================
+autocmd BufRead,BufNewFile *.md match BadWhitespace /\s\+$/
