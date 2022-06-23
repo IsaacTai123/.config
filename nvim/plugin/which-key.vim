@@ -62,6 +62,11 @@ let g:which_key_map_g =  {}
 " Command or function wrapper to make it work with vim-which-key.
 " Ref issue #126, #133 etc.
 
+let g:which_key_map_space['d'] = [':CtrlPBuffer', 'ctrlP buffer']
+let g:which_key_map_space['u'] = [':CtrlPMRUFiles', 'ctrlP MRU files']
+" let g:which_key_map_space['h'] = [':CtrlPMRUFiles', 'ctrlP MRU files']
+" let g:which_key_map_space['l'] = [':CtrlPMRUFiles', 'ctrlP MRU files']
+
 let g:which_key_map_space.b = {
       \ 'name' : '+buffer' ,
       \ '1' : [':b1'        , 'buffer 1']        ,
