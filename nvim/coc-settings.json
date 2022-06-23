@@ -24,13 +24,17 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "json",
     "css",
-    "javascript",
     "graphql",
     "html",
+    "python",
     "yaml"
   ],
+
+  // python config
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
+  // "python.linting.flake8Enabled": true,
+  "python.formatting.autopep8Path": "/opt/homebrew/bin/autopep8",
   "suggest.floatConfig": {
     "border": true
   },

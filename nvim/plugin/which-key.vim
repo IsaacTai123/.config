@@ -67,6 +67,13 @@ let g:which_key_map_space['u'] = [':CtrlPMRUFiles', 'ctrlP MRU files']
 " let g:which_key_map_space['h'] = [':CtrlPMRUFiles', 'ctrlP MRU files']
 " let g:which_key_map_space['l'] = [':CtrlPMRUFiles', 'ctrlP MRU files']
 
+let g:which_key_map_space.a = { 
+      \ 'name' : '+action' ,
+      \ 's' : [':!python3'        , 'Python exec select'],
+      \ 'p' : [':call PRUN()'     , 'Python exex current file'],
+      \}
+
+
 let g:which_key_map_space.b = {
       \ 'name' : '+buffer' ,
       \ '1' : [':b1'        , 'buffer 1']        ,
