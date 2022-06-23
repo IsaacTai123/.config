@@ -202,17 +202,17 @@ let g:which_key_map_space.w = {
 
 let g:which_key_map_space.f = {
       \ 'name' : '+fzf',
-      \ 'H' : [':FZF ~/', 'Search from HOME'],
-      \ '/' : [':FZF /', 'Search from /'],
-      \ 'c' : [':FZF' , 'Search in current folder'],
-      \ 'b' : [':Buffers', 'Search Buffer'],
+      \ ';' : [':FZF ~/', 'Srch from HOME'],
+      \ '/' : [':FZF /', 'Srch from /'],
+      \ 'c' : [':FZF' , 'Srch in current folder'],
+      \ 'b' : [':Buffers', 'Srch Buffer'],
       \ 'r' : [':Rg', 'Srch File & Content'],
-      \ 'B' : [':BLines', 'Srch in current Buffer'],
-      \ 'l' : [':Lines', 'Srch all Buffer'],
+      \ 's' : [':BLines', 'Srch in current Buffer'],
+      \ 'l' : [':Lines', 'Srch in all Buffer'],
       \ 'f' : [':Files', 'File Only'],
       \ 'h' : [':History', 'All cmd History'],
-      \ 'm' : [':Marks', 'Search Mark'],
-      \ 'M' : [":Maps", 'Search all Maps'],
+      \ 'm' : [':Marks', 'Srch Mark'],
+      \ 'a' : [":Maps", 'Srch all Maps'],
       \}
 
 let g:which_key_map_space.o = {
