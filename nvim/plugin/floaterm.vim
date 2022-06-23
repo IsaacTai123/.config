@@ -34,3 +34,8 @@ let g:floaterm_keymap_toggle = '<Leader>t'
 
 " ========== Tips ==========
 " <C-\><C-n> to enter normal mode inside floating terminal
+
+" Hide status line
+autocmd! FileType floaterm
+autocmd  FileType floaterm set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler

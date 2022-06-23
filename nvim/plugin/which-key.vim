@@ -233,7 +233,7 @@ let g:which_key_map_space.g = {
 let g:which_key_map_space.t = {
       \ 'name' : '+floaterm',
       \ '/' : [':FloatermNew --cwd=<root>', 'New Floaterm Win'],
-      \ ';' : [':FloatermNew! cd %:p:h', 'New Floaterm Win'],
+      \ ';' : [':FloatermNew! --height=0.9 --width=0.9 cd %:p:h', 'New Floaterm Win'],
       \ 'h' : [':FloatermHide', 'Hide Floaterm Win'],
       \ 'n' : [':FloatermNext', 'Next Floaterm Win'],
       \ 'k' : [':FloatermKill', 'Kill Floaterm Win'],
@@ -242,6 +242,7 @@ let g:which_key_map_space.t = {
       \ 't' : [':FloatermToggle', 'Toggle Floaterm Win'],
       \ 'u' : [':FloatermUpdate', 'Update Floaterm Win'],
       \ '.' : [':FloatermNew! --height=0.15 --width=0.98 --wintype=normal --name=terminal --position=bottom --autoclose=1 cd %:p:h', 'terminal'],
+      \ 'b' : [':FloatermNew! --height=0.45 --width=0.98 --wintype=normal --name=terminal --position=bottom --autoclose=1 cd %:p:h', 'button terminal'],
       \ 'r' : [':FloatermNew --height=0.9 --width=0.9 --wintype=float --name=ranger --position=center --autoclose=1 ranger', 'ranger'],
       \ 'g' : [':FloatermNew --height=0.9 --width=0.9 --wintype=float --name=lazygit --position=center --autoclose=1 lazygit', 'lazygit'],
       \ 'T' : [':FloatermNew --height=0.95 --width=0.95 --wintype=float --name=tig --position=center --autoclose=1 tig', 'Tig'],
@@ -321,7 +322,3 @@ let g:which_key_map_g = {
 
 
 "
-" Hide status line
-autocmd! FileType which_key
-autocmd  FileType which_key set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
