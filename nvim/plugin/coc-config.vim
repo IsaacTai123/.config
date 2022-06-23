@@ -18,5 +18,6 @@ let g:coc_global_extensions = [
       \    'coc-vimlsp',
       \    'coc-phpls',
       \    'coc-diagnostic',
+      \    'coc-explorer',
       \    'coc-docker'
       \  ]

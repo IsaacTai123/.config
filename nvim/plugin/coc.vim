@@ -169,6 +169,72 @@ nnoremap <silent><nowait> <space>ck  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>cp  :<C-u>CocListResume<CR>
 
+"==============================================
+" coc-Explorer *presets
+" =============================================
+let g:coc_explorer_global_presets = {
+\   '.nvim': {
+\     'root-uri': '~/.config/nvim/',
+\   },
+\   'web': {
+\     'root-uri': '~/Web/',
+\   },
+\   'workDocument': {
+\     'root-uri': '~/WorkDocument/',
+\   },
+\   'myDocument': {
+\     'root-uri': '~/MyDocument/',
+\   },
+\   'cocConfig': {
+\      'root-uri': '~/.config/coc',
+\   },
+\   'tab': {
+\     'position': 'tab',
+\     'quit-on-open': v:true,
+\   },
+\   'tab:$': {
+\     'position': 'tab:$',
+\     'quit-on-open': v:true,
+\   },
+\   'floating': {
+\     'position': 'floating',
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingTop': {
+\     'position': 'floating',
+\     'floating-position': 'center-top',
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingLeftside': {
+\     'position': 'floating',
+\     'floating-position': 'left-center',
+\     'floating-width': 50,
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingRightside': {
+\     'position': 'floating',
+\     'floating-position': 'right-center',
+\     'floating-width': 50,
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'simplify': {
+\     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+\   },
+\   'buffer': {
+\     'sources': [{'name': 'buffer', 'expand': v:true}]
+\   },
+\ }
+
+" =================================
+" Make explorer change when the buffer is changed.
+" =================================
+" Sure the following script is called after CocExplorerOpenPost
+" function s:explorer_inited()
+" 	autocmd BufEnter * if (&filetype != 'coc-explorer') | exe 'silent! let dir = getcwd()'
+" 	autocmd BufEnter * call CocActionAsync("runCommand", "explorer.doAction", "closest", {"name": "cd", "args": [dir]})
+" endfunction
+"
+" autocmd User CocExplorerOpenPost call s:explorer_inited() close coc-explorer when this is a last buffer autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 
 "===============================================
