@@ -19,3 +19,5 @@ endif
 
 "ignore all the file that are ignore by git
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+nnoremap <C-b> :CtrlPBuffer<CR>
