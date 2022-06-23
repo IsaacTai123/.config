@@ -49,6 +49,16 @@ map XX :q!<CR>
 map <C-o> <C-w>o
 
 "copy and paste
+fun! QuitVim()
+  let choice = confirm("This will Exit without saving are you sure ?", "&yes\n&no", 1)
+  if choice == 1
+    execute "q!"
+    echon "Good Luck !"
+    return
+  endif
+  echon "Action canceled !"
+endfun
+
 vnoremap <C-c> "*y :let @+=@*<CR>
 " map <leader><C-v> "+P
 
