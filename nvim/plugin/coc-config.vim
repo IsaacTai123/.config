@@ -19,5 +19,6 @@ let g:coc_global_extensions = [
       \    'coc-phpls',
       \    'coc-diagnostic',
       \    'coc-explorer',
+      \    'coc-htmldjango',
       \    'coc-docker'
       \  ]
