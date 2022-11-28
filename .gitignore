@@ -20,6 +20,8 @@ tags
 lazygit/
 lazydocker/
 Nuget/
+yt-dlp/
+mume/
 
 QtProject
 configstore

@@ -13,8 +13,12 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " let g:airline_theme='zenburn'
 " let g:airline_theme='base16'
 " let g:airline_theme='gruvbox'
+" let g:airline_theme='base16_nord'
+" let g:airline_theme='base16_solarized_dark'
+let g:airline_theme='base16_nord'
 
-let g:airline_bg='light'
+" let g:airline_bg='light'
+let g:airline_bg='dark'
 
 "===== display buffer number in tab =====
 " let g:airline#extensions#tabline#buffer_idx_mode = 0
