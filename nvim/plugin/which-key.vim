@@ -64,6 +64,10 @@ let g:which_key_map_g =  {}
 
 let g:which_key_map_space['d'] = [':CtrlPBuffer', 'ctrlP buffer']
 let g:which_key_map_space['u'] = [':CtrlPMRUFiles', 'ctrlP MRU files']
+let g:which_key_map_space['j'] = [':<C-W>2-', 'expand-window-below']
+let g:which_key_map_space['k'] = [':<C-W>2+', 'expand-window-up']
+let g:which_key_map_space['h'] = [':<C-W>2<', 'expand-window-left']
+let g:which_key_map_space['L'] = [':<C-W>2>', 'expand-window-right']
 " let g:which_key_map_space['h'] = [':CtrlPMRUFiles', 'ctrlP MRU files']
 " let g:which_key_map_space['l'] = [':CtrlPMRUFiles', 'ctrlP MRU files']
 
@@ -315,9 +319,10 @@ let g:which_key_map_space.t = {
       \ 's' : [':FloatermShow', 'Show Floaterm Win'],
       \ 't' : [':FloatermToggle', 'Toggle Floaterm Win'],
       \ 'u' : [':FloatermUpdate', 'Update Floaterm Win'],
+      \ 'r' : [':FloatermNew! --height=0.98 --width=0.45 --wintype=right --name=terminal --position=right --autoclose=1 cd %:p:h', 'Right-terminal'],
       \ '.' : [':FloatermNew! --height=0.15 --width=0.98 --wintype=normal --name=terminal --position=bottom --autoclose=1 cd %:p:h', 'terminal'],
       \ 'b' : [':FloatermNew! --height=0.45 --width=0.98 --wintype=normal --name=terminal --position=bottom --autoclose=1 cd %:p:h', 'button terminal'],
-      \ 'r' : [':FloatermNew --height=0.9 --width=0.9 --wintype=float --name=ranger --position=center --autoclose=1 ranger', 'ranger'],
+      \ 'R' : [':FloatermNew --height=0.9 --width=0.9 --wintype=float --name=ranger --position=center --autoclose=1 ranger', 'ranger'],
       \ 'g' : [':FloatermNew --height=0.9 --width=0.9 --wintype=float --name=lazygit --position=center --autoclose=1 lazygit', 'lazygit'],
       \ 'T' : [':FloatermNew --height=0.95 --width=0.95 --wintype=float --name=tig --position=center --autoclose=1 tig', 'Tig'],
       \ 'H' : [':FloatermNew --height=0.8 --width=0.8 --wintype=float --name=htop --position=center --autoclose=1 htop', 'htop'],

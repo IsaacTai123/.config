@@ -30,6 +30,7 @@ nnoremap L $
 " nnoremap <leader>cb :bd<CR>
 nnoremap gg gg
 vnoremap gg gg
+nnoremap <leader>c viw~<CR>
 
 "=================
 " Insert ; at the end
