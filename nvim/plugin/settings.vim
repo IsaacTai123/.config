@@ -1,4 +1,5 @@
-let g:python3_host_prog = '/opt/homebrew/bin/python3'
+" let g:python3_host_prog = '/opt/homebrew/bin/python3'
+let g:python3_host_prog = '/Users/tisaac/.pyenv/versions/3.9.2/bin/python3'
 
 
 " For VimPlug - allow using 'gx' to open github page in default browser
