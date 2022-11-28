@@ -5,6 +5,7 @@ call plug#begin('~/.config/nvim/plugged')
 
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'lervag/vimtex'
 
   Plug 'ctrlpvim/ctrlp.vim' 
   Plug 'mattn/emmet-vim'
@@ -58,7 +59,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tell-k/vim-autopep8'
   Plug 'nvie/vim-flake8'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'kien/rainbow_parentheses.vim'
+  " Plug 'kien/rainbow_parentheses.vim'
 
   " color theme
   Plug 'rakr/vim-one'
@@ -69,6 +70,9 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'HerringtonDarkholme/yats.vim' "TS Syntax
   Plug 'ntk148v/vim-horizon'
   Plug 'sheerun/vim-polyglot'
+  Plug 'EdenEast/nightfox.nvim' " Vim-Plug
+  Plug 'shaunsingh/nord.nvim'
+  Plug 'overcache/NeoSolarized'
 
   " vim table quick format
   Plug 'dhruvasagar/vim-table-mode'
