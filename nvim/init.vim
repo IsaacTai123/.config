@@ -123,4 +123,7 @@ call plug#begin('~/.config/nvim/plugged')
   " focus reading in vim
   Plug 'junegunn/goyo.vim'
 
-call plug#end()
+  " Github copilot
+  Plug 'github/copilot.vim'
+  
+  call plug#end()
