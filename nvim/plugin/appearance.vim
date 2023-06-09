@@ -111,7 +111,8 @@ try
   " colorscheme solarized
   " colorscheme base16-solarized-dark
   " colorscheme NeoSolarized
-  colorscheme nordfox
+  " colorscheme nordfox
+  colorscheme base16-onedark
   " colorscheme zenburn
   " highlight EndOfBuffer cterm=NONE ctermfg=bg guibg=NONE ctermbg=NONE
 catch
