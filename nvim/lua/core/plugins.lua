@@ -28,6 +28,8 @@ return require('packer').startup(function(use)
 	requires = { { 'nvim-lua/plenary.nvim'} }
   }
   use 'voldikss/vim-floaterm'
+  -- Lua
+  use "folke/which-key.nvim"
 
 
   -- Automatically set up your configuration after cloning packer.nvim
