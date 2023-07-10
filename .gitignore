@@ -15,6 +15,7 @@ ranger/plugins/__pycache__
 !.gitignore
 mc/
 nvim/plugged
+nvim/plugins
 coc/
 tags
 lazygit/
