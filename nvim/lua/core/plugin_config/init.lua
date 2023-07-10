@@ -6,3 +6,7 @@ require("core.plugin_config.floaterm")
 require("core.plugin_config.bufferline")
 require("core.plugin_config.whichkey")
 
+require("core.plugin_config.vim-sneak")
+require("core.plugin_config.gitgutter")
+require("core.plugin_config.autocompletion")
+require("core.plugin_config.snippets")
