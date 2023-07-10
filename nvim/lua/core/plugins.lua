@@ -30,7 +30,16 @@ return require('packer').startup(function(use)
   use 'voldikss/vim-floaterm'
   -- Lua
   use "folke/which-key.nvim"
+  -- Autocompletion
+  use "hrsh7th/nvim-cmp" -- Auto completion engine plugin for nvim
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path" -- auto completion when it comes to path
+  use "hrsh7th/cmp-nvim-lsp"
 
+  -- snippets
+  use "L3MON4D3/LuaSnip" -- snip engine
+  use "saadparwaiz1/cmp_luasnip" -- allow nvim-cmp to show autocomplition
+  use "rafamadriz/friendly-snippets" -- a lot of useful snippet for a lot of language
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
