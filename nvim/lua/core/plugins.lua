@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
   use "folke/which-key.nvim"
   use "justinmk/vim-sneak"
   use "tpope/vim-surround"
+  use "airblade/vim-gitgutter"
   -- Autocompletion
   use "hrsh7th/nvim-cmp" -- Auto completion engine plugin for nvim
   use "hrsh7th/cmp-buffer"
