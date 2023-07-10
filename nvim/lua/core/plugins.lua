@@ -30,6 +30,8 @@ return require('packer').startup(function(use)
   use 'voldikss/vim-floaterm'
   -- Lua
   use "folke/which-key.nvim"
+  use "justinmk/vim-sneak"
+  use "tpope/vim-surround"
   -- Autocompletion
   use "hrsh7th/nvim-cmp" -- Auto completion engine plugin for nvim
   use "hrsh7th/cmp-buffer"
