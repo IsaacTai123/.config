@@ -37,11 +37,11 @@ return require('packer').startup(function(use)
   use "hrsh7th/nvim-cmp" -- Auto completion engine plugin for nvim
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path" -- auto completion when it comes to path
-  use "hrsh7th/cmp-nvim-lsp"
+  use "onsails/lspkind.nvim" -- add vscode like icons to autocompletion
 
   -- snippets
   use "L3MON4D3/LuaSnip" -- snip engine
-  use "saadparwaiz1/cmp_luasnip" -- allow nvim-cmp to show autocomplition
+  use "saadparwaiz1/cmp_luasnip" -- allow nvim-cmp to show autocompletion
   use "rafamadriz/friendly-snippets" -- a lot of useful snippet for a lot of language
 
   -- Automatically set up your configuration after cloning packer.nvim
