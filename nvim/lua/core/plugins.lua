@@ -44,6 +44,18 @@ return require('packer').startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- allow nvim-cmp to show autocompletion
   use "rafamadriz/friendly-snippets" -- a lot of useful snippet for a lot of language
 
+  -- managing & installing LSP servers
+  use "williamboman/mason.nvim" -- lsp is built in neovim, but the lsp server need to be install
+  use "williamboman/mason-lspconfig.nvim" -- the bridge for mason and nvim-lspconfig
+  
+  -- Configuring lsp servers
+  use "neovim/nvim-lspconfig"
+  use "hrsh7th/cmp-nvim-lsp" -- configure lsp server so that they appear in autocompletion
+  use {
+    "glepnir/lspsaga.nvim",
+    branch = "main"
+  } -- add enhance UI to LSP experience
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
