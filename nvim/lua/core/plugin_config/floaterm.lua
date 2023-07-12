@@ -7,6 +7,12 @@ vim.g.floaterm_autoclose = 1
 
 -- Configuration example
 
+-- key map to toggle floaterm in normal and terminal mode, and terminal back to normal mode
+vim.keymap.set("n", "<Leader>t", "<cmd>FloatermToggle<cr>", {noremap = true, silent = true})
+vim.keymap.set("t", "<Leader>t", "<cmd>FloatermToggle<cr>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('t', ',<Esc>', '<C-\\><C-n>', { noremap = true })
+-- vim.g.floaterm_keymap_toggle = '<leader>t'  "you can set it with this format either"
+
 -- Set floaterm window's background to black
 vim.cmd([[hi Floaterm guibg=black]])
 -- Set floating window border line color to cyan, and background to orange
@@ -23,4 +29,3 @@ vim.cmd([[
     autocmd FileType floaterm autocmd BufLeave <buffer> set laststatus=2 showmode ruler
   augroup END
 ]])
-
