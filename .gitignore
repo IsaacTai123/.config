@@ -26,3 +26,5 @@ mume/
 
 QtProject
 configstore
+
+nvim/plugin/
