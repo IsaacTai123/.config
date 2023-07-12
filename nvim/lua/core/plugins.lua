@@ -36,6 +36,7 @@ return require('packer').startup(function(use)
   use "justinmk/vim-sneak"
   use "tpope/vim-surround"
   use "airblade/vim-gitgutter"
+
   -- Autocompletion
   use "hrsh7th/nvim-cmp" -- Auto completion engine plugin for nvim
   use "hrsh7th/cmp-buffer"
@@ -58,6 +59,8 @@ return require('packer').startup(function(use)
     "glepnir/lspsaga.nvim",
     branch = "main"
   } -- add enhance UI to LSP experience
+
+  use "jose-elias-alvarez/typescript.nvim" -- add more functionality to typescript server
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
