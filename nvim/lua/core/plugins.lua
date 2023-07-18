@@ -62,6 +62,9 @@ return require('packer').startup(function(use)
 
   use "jose-elias-alvarez/typescript.nvim" -- add more functionality to typescript server
 
+  -- Comment
+  use "tpope/vim-commentary"
+
   use 'fgheng/winbar.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
