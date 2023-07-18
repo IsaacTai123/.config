@@ -26,6 +26,13 @@ wk.register({
     f = { "<cmd>Telescope find_files<cr>", "Find files" },
     h = { "<cmd>Telescope command_history<cr>", "Search for command history" },
   },
+  p = {
+    name = "Packer",
+    i = { ":PackerInstall<cr>", "Install package" },
+    s = { ":PackerSync<cr>", "Packer Sync" },
+    S = { ":PackerStatus<cr>", "Packer Status" },
+    u = { ":PackerUpdate<cr>", "Packer update" },
+  },
   l = {
     name = "LSP",
     a = { "<cmd>Lspsaga code_action<cr>", "Action"},
