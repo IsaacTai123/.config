@@ -15,11 +15,11 @@ vim.keymap.set('i', 'jk', '<Esc>', { silent = true })
 vim.keymap.set('i', 'jj', '<Esc>', { silent = true })
 vim.keymap.set('n', '<Leader>j', 'o<Esc>', { silent = true })
 vim.keymap.set('n', '<Leader>k', 'O<Esc>', { silent = true })
-vim.keymap.set('n', '<leader>w', ':wa<CR>', { silent = true })
-vim.keymap.set('n', '<leader>s', ':w<CR>', { silent = true })
+vim.keymap.set('n', '<Leader>w', ':wa<CR>', { silent = true })
+vim.keymap.set('n', '<Leader>s', ':w<CR>', { silent = true })
 vim.keymap.set('n', 'H', '^', { silent = true })
 vim.keymap.set('n', 'L', '$', { silent = true })
-vim.keymap.set('n', '<leader>c', 'viw~<CR>', { silent = true })
+vim.keymap.set('n', '<Leader>c', 'viw~<CR>', { silent = true })
 vim.keymap.set('i', '<C-e>;', '<end>;<CR>', { silent = true })
 vim.keymap.set('i', '<C-e>.', '<end>.', { silent = true })
 vim.keymap.set('i', '<C-b>;', '<esc>][i<end>;<CR>', { silent = true })
@@ -50,6 +50,7 @@ vim.keymap.set('n', ']f', ":call search('\\(\\(if\\\\|for\\\\|while\\\\|switch\\
 vim.keymap.set('n', '[f', ":call search('\\(\\(if\\\\|for\\\\|while\\\\|switch\\\\|catch\\)\\\\_s*\\)\\@64<!(\\\\_[^)]*)\\\\_[^;{}()]*\\zs{', 'bw')<CR>", { silent = true })
 
 
+-- This is not working !!!
 vim.cmd([[
   function! QuitVim()
     let choice = confirm("This will Exit without saving are you sure ?", "&yes\n&no", 1)
