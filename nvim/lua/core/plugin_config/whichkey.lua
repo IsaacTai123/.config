@@ -11,22 +11,21 @@ local wk = require("which-key")
 
 wk.register({
   f = {
-    name = "+floaterm", -- optional group name
+    name = "Floaterm", -- optional group name
     c = { "<cmd>FloatermNew<cr>", "Create new floaterm"},
     n = { "<cmd>FloatermNext<cr>", "Next floaterm"},
     p = { "<cmd>FloatermPrev<cr>", "Previous floaterm"},
     t = { "<cmd>FloatermToggle<cr>", "Toggle floaterm window"},
     k = { "<cmd>FloatermKill<cr>", "Kill floaterm window"},
+    b = { "<cmd>FloatermNew! --height=0.2 --width=0.98 --wintype=normal --name=terminal --position=bottom --autoclose=1 cd %:p:h<cr>", "Create button terminal"},
   },
-  s = {
-    name = "+telescope",
+  t = {
+    name = "Telescope",
     o = { "<cmd>Telescope oldfiles<cr>", "Search in oldfiles" },
     b = { "<cmd>Telescope buffers<cr>", "Search in buffers" },
     f = { "<cmd>Telescope find_files<cr>", "Find files" },
     h = { "<cmd>Telescope command_history<cr>", "Search for command history" },
   },
-}, { prefix = "<Space>" })
-
   l = {
     name = "LSP",
     a = { "<cmd>Lspsaga code_action<cr>", "Action"},
@@ -62,3 +61,4 @@ wk.register({
     q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
   },
+}, { prefix = "<Space>" })
