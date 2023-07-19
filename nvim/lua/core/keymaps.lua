@@ -38,6 +38,7 @@ vim.keymap.set('n', 'Q', ':q<CR>', { silent = true })
 vim.keymap.set('n', 'XX', ':call QuitVim()<CR>', { silent = true })
 vim.keymap.set('n', '<C-o>', '<C-w>o', { silent = true })
 vim.keymap.set('v', '<C-c>', '"*y:let @+=@*<CR>', { silent = true })
+vim.keymap.set('n', '<Leader>b', ':bd<CR>', { silent = true })
 
 -- Git Gutter mappings
 -- vim.keymap.set('n', ']h', '<Plug>(GitGutterNextHunk)', {})

@@ -68,4 +68,18 @@ wk.register({
     q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
   },
+  g = {
+    name = "Gitgutter",
+    n = { "<cmd>GitGutterNextHunk<cr>", "next hunk" },
+    p = { "<cmd>GitGutterPrevHunk<cr>", "prev hunk" },
+    q = { "<cmd>GitGutterQuickFix<cr>", "Quickfix" },
+    d = { "<cmd>GitGutterDiffOrig<cr>", "Diff" },
+    f = { "<cmd>GitGutterFold<cr>", "fold" },
+    h = { "<cmd>GitGutterLineHighlightsToggle<cr>", "Toggle Highlight" },
+    e = { "<cmd>GitGutterLineNrHighlightsToggle<cr>", "Toggle Number Highlight" },
+    H = { "<cmd>GitGutterStageHunk<cr>", "Stage Hunk" },
+    U = { "<cmd>GitGutterUndoHunk<cr>", "Undo Hunk" },
+    P = { "<cmd>GitGutterPreviewHunk<cr>", "Preview Hunk" },
+    s = { "<cmd>GitGutterAll<cr>", "Update signs across all buffer" },
+
 }, { prefix = "<Space>" })

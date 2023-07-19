@@ -6,7 +6,26 @@ vim.opt.signcolumn = 'yes'
 vim.g.gitgutter_set_sign_backgrounds = 1
 vim.g.gitgutter_sign_modified = 'M'
 
+vim.g.gitgutter_sign_added = '|'
+vim.g.gitgutter_sign_modified = '|'
+vim.g.gitgutter_sign_removed = '|'
+vim.g.gitgutter_sign_modified_removed = 'D'
+
 -- Customize sign colors
 vim.cmd([[highlight GitGutterAdd guifg=#009900 ctermfg=2]])
 vim.cmd([[highlight GitGutterChange guifg=#bbbb00 ctermfg=3]])
 vim.cmd([[highlight GitGutterDelete guifg=#ff2222 ctermfg=1]])
+
+-- 定義 GitGutterLineHighlights 的顏色為亮綠色
+vim.cmd([[highlight GitGutterAddLine guifg=NONE guibg=#45544B ]])
+vim.cmd([[highlight GitGutterChangeLine guifg=NONE guibg=#bbbb00 ]])
+vim.cmd([[highlight GitGutterDeleteLine guifg=NONE guibg=#ff2222 ]])
+vim.cmd([[highlight GitGutterChangeDeleteLine guifg=NONE guibg=#91554B ]])
+
+
+-- Define color in Diff
+vim.cmd([[highlight diffAdd guifg=NONE guibg=#45544B ]])
+vim.cmd([[highlight diffChang guifg=NONE guibg=#bbbb00 ]])
+vim.cmd([[highlight diffRemove guifg=NONE guibg=#91554B ]])
+
+vim.cmd([[autocmd BufWinLeave * if exists('b:gitgutter_preview_buffer') | silent! execute 'bwipeout! ' . b:gitgutter_preview_buffer | endif]])
