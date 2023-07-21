@@ -18,6 +18,7 @@ wk.register({
     t = { "<cmd>FloatermToggle<cr>", "Toggle floaterm window"},
     k = { "<cmd>FloatermKill<cr>", "Kill floaterm window"},
     b = { "<cmd>FloatermNew! --height=0.2 --width=0.98 --wintype=normal --name=terminal --position=bottom --autoclose=1 cd %:p:h<cr>", "Create button terminal"},
+    g = { "<cmd>FloatermNew! --height=0.85 --width=0.98 --wintype=normal --name=lazygit --position=center --autoclose=1 lazygit<cr>", "Create button terminal"},
   },
   t = {
     name = "Telescope",
@@ -52,8 +53,8 @@ wk.register({
     name = "LSP",
     a = { "<cmd>Lspsaga code_action<cr>", "Action"},
     k = { "<cmd>Lspsaga peek_definition<cr>", "Peek definition"},
-    -- h = { "<cmd>Lspsaga hover_doc<cr>", "Hover doc"},
-    t = { "<cmd>Lspsaga peek_type_definition<cr>", "Peek type definition"},
+    h = { "<cmd>Lspsaga hover_doc<cr>", "Hover doc"},
+    T = { "<cmd>Lspsaga peek_type_definition<cr>", "Peek type definition"},
     g = { "<cmd>Lspsaga goto_type_definition<cr>", "Goto type definition"},
     R = { "<cmd>Lspsaga project_replace<cr>", "Project replace"},
     O = { "<cmd>Lspsaga outline<cr>", "Outline"},
@@ -64,8 +65,8 @@ wk.register({
     n = { "<cmd>Lspsaga diagnostic_jump_next<cr>", "Jump to next diagnostics"},
     p = { "<cmd>Lspsaga diagnostic_jump_prev<cr>", "Jump to prev diagnostics"},
     r = { "<cmd>Lspsaga rename<cr>", "Rename"},
-    e = { "<cmd>Lspsaga goto_definition<cr>", "Goto definition"},
-    T = { "<cmd>Lspsaga term_toggle<cr>", "Terminal toggle"},
+    t = { "<cmd>Lspsaga goto_definition<cr>", "Goto definition"},
+    z = { "<cmd>Lspsaga term_toggle<cr>", "Terminal toggle"},
     i = { "<cmd>Lspsaga incoming_calls<cr>", "Incoming calls"},
     o = { "<cmd>Lspsaga outcoming_calls<cr>", "Outcoming calls"},
     f = {
@@ -96,5 +97,5 @@ wk.register({
     U = { "<cmd>GitGutterUndoHunk<cr>", "Undo Hunk" },
     P = { "<cmd>GitGutterPreviewHunk<cr>", "Preview Hunk" },
     s = { "<cmd>GitGutterAll<cr>", "Update signs across all buffer" },
-
+  },
 }, { prefix = "<Space>" })

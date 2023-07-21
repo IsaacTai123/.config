@@ -66,6 +66,8 @@ return require('packer').startup(function(use)
   use "tpope/vim-commentary"
 
   use 'fgheng/winbar.nvim'
+  use 'mhinz/vim-startify'
+  use 'jiangmiao/auto-pairs'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

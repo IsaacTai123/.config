@@ -25,7 +25,5 @@ vim.cmd([[highlight GitGutterChangeDeleteLine guifg=NONE guibg=#91554B ]])
 
 -- Define color in Diff
 vim.cmd([[highlight diffAdd guifg=NONE guibg=#45544B ]])
-vim.cmd([[highlight diffChang guifg=NONE guibg=#bbbb00 ]])
+vim.cmd([[highlight diffChange guifg=NONE guibg=#C7B216 ]])
 vim.cmd([[highlight diffRemove guifg=NONE guibg=#91554B ]])
-
-vim.cmd([[autocmd BufWinLeave * if exists('b:gitgutter_preview_buffer') | silent! execute 'bwipeout! ' . b:gitgutter_preview_buffer | endif]])
