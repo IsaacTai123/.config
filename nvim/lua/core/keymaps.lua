@@ -74,3 +74,6 @@ function QuitVim()
   end
 end
 
+-- Convert String text to Decimal
+vim.cmd([[command! -range=% -nargs=0 ConvertToDecimal <line1>,<line2>s/\_./\=char2nr(submatch(0)) . ' '/g]])
+

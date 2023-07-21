@@ -98,4 +98,8 @@ wk.register({
     P = { "<cmd>GitGutterPreviewHunk<cr>", "Preview Hunk" },
     s = { "<cmd>GitGutterAll<cr>", "Update signs across all buffer" },
   },
+  o = {
+    name = "Others",
+    e = { "<cmd>ConvertToDecimal<cr><cr>", "Convert whole page to Decimal" }
+  }
 }, { prefix = "<Space>" })

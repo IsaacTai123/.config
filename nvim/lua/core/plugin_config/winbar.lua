@@ -31,6 +31,9 @@ winbar.setup({
         'lir',
         'Outline',
         'spectre_panel',
+        'toggleterm',
         'qf',
     }
 })
+
+-- try to disable winbar in floaterm
