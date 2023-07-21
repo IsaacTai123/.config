@@ -17,13 +17,17 @@ telescope.setup{
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
       }
+    },
+    layout_strategy = 'vertical',
+    layout_config = { height = 0.95, width = 0.5 },
+    winblend=0 -- transparency
+  },
+  pickers = {
+    find_files = {
+      theme = "dropdown",
     }
-  }
+  },
 }
 
 
 local builtin = require "telescope.builtin"
--- vim.keymap.set('n', '<c-p>', builtin.find_files, {})
--- vim.keymap.set('n', '<Space><Space>', builtin.oldfiles, {})
--- vim.keymap.set('n', '<Space>fg', builtin.live_grep, {})
--- vim.keymap.set('n', '<Space>fh', builtin.help_tags, {})
