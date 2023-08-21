@@ -15,7 +15,7 @@ vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.autoread = true
 vim.opt.ruler = true
-vim.opt.showtabline = 4
+vim.opt.showtabline = 3
 vim.opt.shortmess = 'I'
 vim.opt.equalalways = true
 vim.opt.statusline = "%F"  -- Show full path in status line
@@ -32,8 +32,8 @@ vim.opt.autoread = true
 vim.opt.laststatus = 2
 -- vim.opt.autowrite = true  -- Auto save changes when you switch to other buffer
 
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2    -- Set the level indent for ">>", "<<"
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4    -- Set the level indent for ">>", "<<"
 vim.opt.shiftround = true --  aligns the indentation to the nearest multiple of shiftwidth when using >> and << commands
 vim.opt.expandtab = true
 

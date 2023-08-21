@@ -50,3 +50,15 @@ lspconfig["gopls"].setup({
   capabilities = capabilities,
   on_attach = on_attach
 })
+
+lspconfig["lua_ls"].setup({
+  filetypes = { "lua" },
+  capabilities = capabilities,
+  on_attach = on_attach
+})
+
+lspconfig["jsonls"].setup({
+  filetypes = { "json" },
+  capabilities = capabilities,
+  on_attach = on_attach
+})

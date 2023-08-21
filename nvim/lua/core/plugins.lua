@@ -33,7 +33,11 @@ return require('packer').startup(function(use)
   use 'voldikss/vim-floaterm'
   -- Lua
   use "folke/which-key.nvim"
-  use "justinmk/vim-sneak"
+
+  -- move cursor
+  use "easymotion/vim-easymotion"
+  -- use "justinmk/vim-sneak"
+
   use "tpope/vim-surround"
   use "airblade/vim-gitgutter"
 
@@ -62,12 +66,23 @@ return require('packer').startup(function(use)
 
   use "jose-elias-alvarez/typescript.nvim" -- add more functionality to typescript server
 
+  -- GoLang
+  use "fatih/vim-go"
+
   -- Comment
   use "tpope/vim-commentary"
 
   use 'fgheng/winbar.nvim'
   use 'mhinz/vim-startify'
   use 'jiangmiao/auto-pairs'
+
+  use 'mbbill/undotree'
+  use 'ThePrimeagen/harpoon'
+
+  use {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

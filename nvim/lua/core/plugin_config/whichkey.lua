@@ -22,13 +22,15 @@ wk.register({
   },
   t = {
     name = "Telescope",
-    j = { "<cmd>Telescope grep_string<cr>", "Search all in cur dir" },
+    j = { "<cmd>Telescope grep_string<cr>", "Search all in current file" },
     a = { "<cmd>Telescope live_grep<cr>", "Search all in cur dir" },
     o = { "<cmd>Telescope oldfiles<cr>", "Search in oldfiles" },
     b = { "<cmd>Telescope buffers<cr>", "Search in buffers" },
     f = { "<cmd>Telescope find_files<cr>", "Find files" },
-    h = { "<cmd>Telescope command_history<cr>", "Search for command history" },
-    g = { "<cmd>Telescope git_status<cr>", "Git status" },
+    h = { "<cmd>Telescope help_tags<cr>", "Search for help tags" },
+    H = { "<cmd>Telescope command_history<cr>", "Search for command history" },
+    g = { "<cmd>Telescope git_files<cr>", "Git files" },
+    G = { "<cmd>Telescope git_status<cr>", "Git status" },
     c = { "<cmd>Telescope git_commits<cr>", "Git commits" },
     s = { "<cmd>Telescope git_stash<cr>", "Git stash" },
     v = { "<cmd>Telescope treesitter<cr>", "Treesitter show variable" },
@@ -42,6 +44,19 @@ wk.register({
     P = { "<cmd>Telescope lsp_implementations<cr>", "Lsp implementation" },
     T = { "<cmd>Telescope lsp_type_definitions<cr>", "Lsp type definitions" },
   },
+  c = {
+    name = "Sample",
+    f = { "<cmd>Telescope find_files<cr>", "Find File" }, -- create a binding with label
+    b = { function() print("bar") end, "Foobar" } -- you can also pass functions!
+  },
+  s = {
+    name = "System",
+    j = { ":horizontal resize -2<cr>", 'Decrease the height'  },
+    k = { ":horizontal resize +2<cr>", 'Increase the height'  },
+    h = { ":vertical resize -2<cr>", 'expand the weight to left'  },
+    l = { ":vertical resize +2<cr>", 'shrink the weight to right'  },
+    b = { ":bufdo bw!<cr>", 'close all buffer without saveing it'  },
+  },
   p = {
     name = "Packer",
     i = { ":PackerInstall<cr>", "Install package" },
@@ -53,9 +68,11 @@ wk.register({
     name = "LSP",
     a = { "<cmd>Lspsaga code_action<cr>", "Action"},
     k = { "<cmd>Lspsaga peek_definition<cr>", "Peek definition"},
+    g = { "<cmd>Lspsaga goto_definition<cr>", "Goto definition"},
     h = { "<cmd>Lspsaga hover_doc<cr>", "Hover doc"},
+    H = { "<cmd>Lspsaga hover_doc ++keep<cr>", "Hover doc keep"},
     T = { "<cmd>Lspsaga peek_type_definition<cr>", "Peek type definition"},
-    g = { "<cmd>Lspsaga goto_type_definition<cr>", "Goto type definition"},
+    t = { "<cmd>Lspsaga goto_type_definition<cr>", "Goto type definition"},
     R = { "<cmd>Lspsaga project_replace<cr>", "Project replace"},
     O = { "<cmd>Lspsaga outline<cr>", "Outline"},
     s = { "<cmd>Lspsaga show_workspace_diagnostics<cr>", "Workspace diagnostics"},
@@ -65,11 +82,11 @@ wk.register({
     n = { "<cmd>Lspsaga diagnostic_jump_next<cr>", "Jump to next diagnostics"},
     p = { "<cmd>Lspsaga diagnostic_jump_prev<cr>", "Jump to prev diagnostics"},
     r = { "<cmd>Lspsaga rename<cr>", "Rename"},
-    t = { "<cmd>Lspsaga goto_definition<cr>", "Goto definition"},
     z = { "<cmd>Lspsaga term_toggle<cr>", "Terminal toggle"},
     i = { "<cmd>Lspsaga incoming_calls<cr>", "Incoming calls"},
     o = { "<cmd>Lspsaga outcoming_calls<cr>", "Outcoming calls"},
     f = {
+      name = "finder",
       f = { "<cmd>Lspsaga finder tyd+def+ref+imp<cr>", "Finder tyd + def + ref + imp"},
       i = { "<cmd>Lspsaga finder imp<cr>", "Finder implementation"},
       r = { "<cmd>Lspsaga finder ref<cr>", "Finder reference"},
@@ -100,6 +117,7 @@ wk.register({
   },
   o = {
     name = "Others",
-    e = { "<cmd>ConvertToDecimal<cr><cr>", "Convert whole page to Decimal" }
+    e = { "<cmd>ConvertToDecimal<cr><cr>", "Convert whole page to Decimal" },
+    u = { "<cmd>UndotreeToggle<cr>", "Undo tree" }
   }
 }, { prefix = "<Space>" })
